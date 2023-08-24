@@ -11,7 +11,7 @@ public class MainClass {
         boolean run = true;
         while (run){
             System.out.println("---------------------------------------------------------------");
-            System.out.println("1.회원가입 2. 로그인 3. 회원목록조회 4.회원정보수정 5.회원삭제 0.종료");
+            System.out.println("1.회원가입 2. 로그인 3. 회원목록조회 4.회원정보수정 5.회원삭제 6. 로그아웃 0.종료");
             System.out.println("----------------------------------------------------------------");
             System.out.println("메뉴선택> ");
             int sel = scanner.nextInt();
@@ -31,6 +31,9 @@ public class MainClass {
             }else if (sel == 5){
                 System.out.println("회원삭제");
                 memberService.delete();
+            }else if (sel == 6){
+                System.out.println("로그아웃");
+                memberService.logout();
             }else {
                 System.out.println("시스템종료");
                 run = false;
